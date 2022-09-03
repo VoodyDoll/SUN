@@ -1,7 +1,7 @@
 <template>	
 
-	<input @input='lord' type="text" v-model='goos'>
-	<button >Ok</button>
+	<input  type="text" v-model='goos'>
+	<!-- <button @click='lord' >Ok</button> -->
 
 
 </template>
@@ -10,19 +10,29 @@
 export default {
 
   name: 'Doter',
-
+  
+props:{
+  goos:{
+    type:String
+  }
+},
   data () {
     return {
-    	goos:''
+    	goos:'',
+      goo:[]
 
     }
   },
   methods:{
-
+    foomo(){
+      
+      // console.log(this.goo)
+    }
   },
   computed:{
-  	lord(Value){
-  		console.log(Value.goos)
+  	lord(){
+      this.goo.push(this.goos)
+  		console.log(this.goo)
   	}
   }
 }

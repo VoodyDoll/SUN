@@ -1,9 +1,6 @@
 <template>
-<doter></doter>
-	<input type="text">
-
-
-
+<doter v-model='got'></doter>
+	<input type="text" :value='got'>
 
 </template>
 
@@ -18,7 +15,7 @@ components:{
 
   data () {
     return {
-
+      got:''
     }
   }
 }
