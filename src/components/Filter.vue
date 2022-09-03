@@ -2,7 +2,7 @@
 	<div class="container">
     <div class="row">
       <div class="col-md">
-       <my-select v-model='selectedSort' :options='sortOptions'></my-select>
+       <my-select v-model='selectedS' :options='sortOptions'></my-select>
       </div>
     </div>
     
@@ -27,10 +27,10 @@ export default {
   methods:{
 
   },
-  watch:{
-    selectedSort(newValue){
-      this.$emit('revers',newValue)
-     // console.log(newValue)
+  computed:{
+    selectedS(neww){
+      this.$emit('revers',neww.value)
+     console.log(neww)
      
     }
   }

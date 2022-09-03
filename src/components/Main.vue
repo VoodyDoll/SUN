@@ -1,5 +1,5 @@
 <template>
-
+  <muter></muter>
   <Filter @revers='rport' v-model='selectedSort'></Filter>
   <Cards :cardrezz='rezz' :nameButton='bag'></Cards>
   <div class="container">    
@@ -50,10 +50,12 @@
 <script>
 import Filter from '@/components/Filter.vue'
 import Cards from '@/components/Cards.vue'
+import Muter from '@/components/Muter.vue'
 export default {
   components:{
     Filter,
-    Cards
+    Cards,
+    Muter
   },
   props:['caseLoad'],
   data(){
@@ -76,7 +78,7 @@ export default {
     methods:{     
       
       rport(toot){
-        // console.log(toot)
+        console.log(toot)
         return this.rezz.sort((post1,post2)=>{
           return post1[toot]-post2[toot]
 
