@@ -1,12 +1,14 @@
 <template>
-<!-- <div v-for="item in dpp" class="checkbox" >	    
-      <input  type="checkbox" value='item.age' @change='loozo' id='item.age'>
-    <label :for="item.name">
+<div v-for="item in dpp" class="checkbox" >	    
+      <input  type="checkbox" :value='item.valuess' v-model='foomo' :id='item.valuess'>
+    <label :for="item.valuess">
      {{item.name}}
     </label>      
   
-</div> -->
- <input  type="checkbox" value='item.tgf'  id='poop' v-model='carl'>
+</div>
+{{foomo}}
+
+ <!-- <input  type="checkbox" value='item.tgf'  id='poop' v-model='carl'>
     <label for="poop">Пальма</label>
       
      <input  type="checkbox" value='item.fd'  id='zooz' v-model='carl'>
@@ -14,8 +16,8 @@
   
      <input  type="checkbox" value='item.agdfge'  id='citty' v-model='carl'>
     <label for="citty">Закон</label>
-   <!-- <p>{{carl}}</p> -->
-     <button @click='loozo'>Ok</button>
+   
+     <button @click='loozo'>Ok</button> -->
 </template>
 
 <script>
@@ -30,7 +32,8 @@ export default {
 
   data () {
     return {
-      carl:[]
+      carl:[],
+      foomo:[]
 
     }
   },
