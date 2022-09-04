@@ -1,5 +1,5 @@
 <template>
-<doter v-model='got'></doter>
+<doter :foo='faza'></doter>
 	<input type="text" :value='got'>
 
 </template>
@@ -15,7 +15,14 @@ components:{
 
   data () {
     return {
-      got:''
+      got:'',
+      faza:[
+      {valuess:'focuss',name:'Фикус'},
+      {valuess:'loid',name:'Пальма'},
+      {valuess:'chankala',name:'Хвощ'},
+      {valuess:'zizan',name:'Пудра'}
+
+      ]
     }
   }
 }

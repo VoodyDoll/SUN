@@ -1,7 +1,8 @@
 <template>	
 
-	<input  type="text" v-model='goos'>
-	<!-- <button @click='lord' >Ok</button> -->
+	<!-- <input  type="text" v-model='goos' > -->
+
+  <mycheckbox @noong='tot' :dpp='foo'></mycheckbox>
 
 
 </template>
@@ -10,12 +11,18 @@
 export default {
 
   name: 'Doter',
-  
-props:{
-  goos:{
-    type:String
-  }
-},
+
+  props:{
+    goos:{
+      type:String
+    },
+    fill:{
+      type:String
+    },
+    foo:{
+      type:Array
+    }
+  },
   data () {
     return {
     	goos:'',
@@ -24,19 +31,21 @@ props:{
     }
   },
   methods:{
-    foomo(){
-      
-      // console.log(this.goo)
+    tot(top){
+      console.log(top)
+
     }
   },
   computed:{
   	lord(){
-      this.goo.push(this.goos)
-  		console.log(this.goo)
+
   	}
   }
 }
 </script>
 
 <style lang="css" scoped>
+.checkbox{
+  display :'block'
+}
 </style>
