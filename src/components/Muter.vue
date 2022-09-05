@@ -2,7 +2,7 @@
 <doter :foo='faza'></doter>
 	<input type="text" ref="gott">
 
-  <button @click='fox' class="opo" :class='{spg:foxy}'>Ok</button>
+  <button @click='fox' class="opo" :class='{spg:foxy}' :style='color:red'>Ok</button>
 
 </template>
 
@@ -30,7 +30,7 @@ components:{
   },
   methods:{
     fox(){
-     console.log(this.$refs.gott.value=555) 
+     this.$refs.gott.value=555
       this.foxy=true
     }
   }
