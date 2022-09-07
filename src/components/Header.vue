@@ -23,6 +23,7 @@
         plus:0,        
         rezz:null,
         datat:null,
+        searchr:''
       }
     },
     methods:{
@@ -32,7 +33,10 @@
         this.$emit('searc',search)
       }
    
-  }
+  },
+  // watch:{
+    
+  // }
   
 }
 </script>
