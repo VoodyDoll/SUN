@@ -3,7 +3,7 @@
 	<!-- <input  type="text" v-model='goos' > -->
 
   <mycheckbox @noong='tot' :dpp='foo'></mycheckbox>
-
+  <input type="text" name="" id="" :value='ptah'>
 
 </template>
 
@@ -21,6 +21,9 @@ export default {
     },
     foo:{
       type:Array
+    },
+    ptah:{
+      type:String
     }
   },
   data () {
