@@ -1,12 +1,16 @@
 <template>
-  <!-- <input type="text" v-model='gudariann'> -->
-  <!-- <input type="text" v-model="gudariann" name=""> -->
-  <!-- <button @click='human'>Ok</button> -->
+  <button @click="go">OK</button>
+
+  <p>{{goo}}</p>
+  <p>Root-{{ item }}</p>
+  <p>Father-{{dooda}} {{hoth}}</p>
+  <!-- <p>{{go[0]}} {{go[1]}}</p> -->
+  <p>{{aza}}</p>
   <sun></sun>
-<div v-for='toy in toys'>
+<!-- <div v-for='toy in toys'>
   <p ></p>
-</div>
-<doter :foo='faza' :ptah='boop'></doter>
+</div> -->
+<!-- <doter :foo='faza' :ptah='boop'></doter> -->
 	<!-- <input type="text" ref="gott"> -->
 
   <!-- <button @click='fox' class="opo" :class='{spg:foxy}'>Ok</button> -->
@@ -27,18 +31,20 @@ components:{
   data () {    
     return {
       got:'',
-      faza:[
-      {valuess:'focuss',name:'Фикус'},
-      {valuess:'loid',name:'Пальма'},
-      {valuess:'chankala',name:'Хвощ'},
-      {valuess:'zizan',name:'Пудра'}
+      aza:[
+      {valuess:'focuss',name:'Фикус',age:10},
+      {valuess:'loid',name:'Пальма',age:12},
+      {valuess:'chankala',name:'Хвощ',age:13},
+      {valuess:'zizan',name:'Пудра',age:14}
 
       ],
       foxy:false,
       gudariann:'',
       cill:'',
       boop:'',
-      toys:[]
+      toys:[],
+      dooda:'GOD',
+      hoth:'GIISRA'
     }
   },
   methods:{
@@ -49,12 +55,14 @@ components:{
     human(){    
 
      this.boop=this.cill
-    }
+    },
+    // goo(){
+    //   this.aza.push({valuess:'tyhg',name:'Ghg',age:100})
+    // }
   },
   computed:{    
-    gudariann(loo){
-      console.log(loo)
-     return this.boop=this.loo
+    goo(){     
+      return this.aza.reduce((item,nin)=>(item=item+nin.age),0)
     }
   }
 
