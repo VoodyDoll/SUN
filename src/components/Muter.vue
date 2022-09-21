@@ -1,5 +1,10 @@
 <template>
- 
+  <div v-if='boo'>
+    <img  :src="require(`../static/img/dolfin.jpg`)" alt="">
+
+  </div>
+  <!-- <div v-else-if='boo===false'>dsd</div> -->
+  <button @click="zoo">Image</button>
   <my-input v-model:myvalue='gnuss'></my-input>
   <my-input v-model:myvalue='gnu'></my-input>
   <my-button @click='fool'></my-button>
@@ -38,8 +43,8 @@ components:{
       poopa:'ррр',
       gnuss:'',
       myvalue:'',
-      gnu:''
-      
+      gnu:'',
+      boo:false      
     }
   },
   methods:{
@@ -53,6 +58,13 @@ components:{
     },
     fool(){
       console.log(`Да ${this.gnu} как ${this.gnuss}`)
+    },
+    zoo(){
+      if (this.boo==true) {
+        this.boo=false
+      }else{
+        this.boo=true
+      }
     }
     // goo(){
     //   this.aza.push({valuess:'tyhg',name:'Ghg',age:100})
@@ -70,6 +82,7 @@ components:{
 //   }
 // }
 }
+
 </script>
 
 <style lang="css" scoped>
