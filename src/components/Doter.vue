@@ -1,9 +1,9 @@
 <template>	
 
-	<!-- <input  type="text" v-model='goos' > -->
+	<input  type="text" v-model='myvalue' >
 
-  <mycheckbox @noong='tot' :dpp='foo'></mycheckbox>
-  <input type="text" name="" id="" :value='ptah'>
+  <!-- <mycheckbox @noong='tot' :dpp='foo'></mycheckbox> -->
+  <!-- <input type="text" name="" id="" :value='ptah'> -->
 
 </template>
 
@@ -13,6 +13,9 @@ export default {
   name: 'Doter',
 
   props:{
+    myvalue:{
+      type:[String, Number]
+    },
     goos:{
       type:String
     },
@@ -28,8 +31,9 @@ export default {
   },
   data () {
     return {
-    	goos:'',
-      goo:[]
+    	goos:'gf',
+      goo:[],
+      tity:''
 
     }
   },
@@ -37,7 +41,11 @@ export default {
     tot(top){
       console.log(top)
 
+    },
+    giga(){
+      this.$emit('update:myvalue',event.target.value)
     }
+
   },
   computed:{
   	lord(){

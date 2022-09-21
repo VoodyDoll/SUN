@@ -1,19 +1,9 @@
 <template>
-  <button @click="go">OK</button>
-
-  <p>{{goo}}</p>
-  <p>Root-{{ item }}</p>
-  <p>Father-{{dooda}} {{hoth}}</p>
-  <!-- <p>{{go[0]}} {{go[1]}}</p> -->
-  <p>{{aza}}</p>
-  <sun></sun>
-<!-- <div v-for='toy in toys'>
-  <p ></p>
-</div> -->
-<!-- <doter :foo='faza' :ptah='boop'></doter> -->
-	<!-- <input type="text" ref="gott"> -->
-
-  <!-- <button @click='fox' class="opo" :class='{spg:foxy}'>Ok</button> -->
+ 
+  <my-input v-model:myvalue='gnuss'></my-input>
+  <my-input v-model:myvalue='gnu'></my-input>
+  <my-button @click='fool'></my-button>
+  
 
 </template>
 
@@ -44,7 +34,12 @@ components:{
       boop:'',
       toys:[],
       dooda:'GOD',
-      hoth:'GIISRA'
+      hoth:'GIISRA',
+      poopa:'ррр',
+      gnuss:'',
+      myvalue:'',
+      gnu:''
+      
     }
   },
   methods:{
@@ -56,6 +51,9 @@ components:{
 
      this.boop=this.cill
     },
+    fool(){
+      console.log(`Да ${this.gnu} как ${this.gnuss}`)
+    }
     // goo(){
     //   this.aza.push({valuess:'tyhg',name:'Ghg',age:100})
     // }
