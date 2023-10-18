@@ -45,7 +45,8 @@ export default {
       case:false
     }
   },
-   methods:{ 
+   methods:{
+
          // изменяет класс и запись в localstor при клике по ней 
       chenge_class(event,name,age,allposition,id){
         // включеине кнопки в navbar
@@ -81,13 +82,25 @@ export default {
       }
           
     },
+
+    watch:{
+      cardrezz(tipp){
+        console.log(tipp)
+
+      }
+
+
+
+    },
+
     mounted(){
 
       let stor=localStorage.getItem('bag_stor')
       console.log(stor)
       this.bag_stor=JSON.parse(stor)
 
-    }
+    },
+    
 }
 </script>
 
